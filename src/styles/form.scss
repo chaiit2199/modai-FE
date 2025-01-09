@@ -1,0 +1,62 @@
+.form {
+  &__input {
+    @apply bg-transparent text-sm font-md bg-slate-50 ring-0;
+    @apply block w-full rounded-2xl pt-4 pb-1 px-4 md:px-3;
+
+    &:enabled {
+      @apply border border-none;
+    }
+
+    &::placeholder {
+      @apply opacity-0;
+    }
+
+    &+label {
+      @apply text-sm left-4 md:left-3;
+      transition: all 0.25s ease;
+    }
+
+    &:focus {
+      @apply focus:ring-0 focus:border-none;
+    }
+
+    &:focus-visible {
+      @apply outline-none ring-0 focus:ring-0 border-none;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown),
+    &:-webkit-autofill {
+      &+label {
+        top: 2px;
+        font-size: 10px;
+      }
+
+      &::placeholder {
+        @apply opacity-100;
+        transition: all 0.25s ease;
+      }
+    }
+  }
+
+  &__label {
+    @apply text-black font-md block absolute text-sm leading-4 top-[9px] clamp-1;
+    max-width: 80%;
+  }
+
+  &__prefix {
+    @apply absolute left-3 top-0 bottom-0 flex items-center;
+
+    ~.form__input {
+      @apply pl-10;
+    }
+
+    ~.form__label {
+      @apply left-10;
+    }
+  }
+
+  &__suffix {
+    @apply absolute right-4 top-0 bottom-0 flex items-center;
+  }
+}

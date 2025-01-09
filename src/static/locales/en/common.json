@@ -1,0 +1,294 @@
+{
+  "home": {
+    "banner": {
+      "title": "Top SMS Marketing Provider",
+      "description": "A highly effective way for businesses to connect with customers directly and drive engagement and sales.",
+      "try_for_free": "Try for Free",
+      "view_packages": "View Packages"
+    },
+    "topTournaments": {
+      "title": "Top tournaments"
+    },
+    "advantages": {
+      "why_choosen_us": "Why Choose Us",
+      "first_item": {
+        "title": "No.1 SMS Platform",
+        "description": "Number 1 in Thailand with 200,000+ users and 3,000+ companies."
+      },
+      "second_item": {
+        "title": "Fast & Reliable",
+        "description": "Direct connect to 3 Main Mobile Networks AI queueing doesn't have a bottleneck process."
+      },
+      "third_item": {
+        "title": "Competitive Price",
+        "description": "The best price for multiple order GUARANTEE!"
+      },
+      "fourth_item": {
+        "title": "Localized Service",
+        "description": "Supporter Tier Global: by Thai people with close supervision and simple communication."
+      }
+    },
+    "pricing": {
+      "title": "Pricing",
+      "btn_see_more": "See more",
+      "price": "Price/Message"
+    },
+    "services": {
+      "title": "Services"
+    },
+    "characteristic": {
+      "title": "Confidence that every SMS is sent quickly and stability",
+      "description": "SMS2BUY intend to develop the system to maintain the highest stability at all times. Supports continuous bulk SMS sending so that each SMS is sent smoothly and effectively.",
+      "feature": {
+        "sms_per_min": "Maximum SMS / Min",
+        "avg_sms_per_day": "Average SMS / Day",
+        "uptime": "Uptime",
+        "total_sms_send_vol": "Total SMS Sent Volume"
+      }
+    },
+    "badge_banner": {
+      "first": {
+        "title": "Improve Your Business Effectiveness with SMS from SMS2BUY",
+        "btn_text": "Try for Free"
+      },
+      "second": {
+        "title": "Try Sending SMS to Your Phone",
+        "description": "Just type in your mobile number and your text.",
+        "btn_text": "Try for Free"
+      }
+    },
+    "tips": {
+      "title": "Tips and Knowledge about SMS & Marketing",
+      "btn_learn_more": "Learn more"
+    },
+    "contact_us": {
+      "title": "Contact Us"
+    }
+  },
+  "pricing_page": {
+    "banner_header": {
+      "title": "Pricing & Packages",
+      "description": "The package price for sending SMS online starts at only 0.18 baht / credit."
+    },
+    "pricing": {
+      "notes": {
+        "one": "7% VAT are not included in the price.",
+        "two": "Purchases must be made by the Juristic person ONLY for the implementation of 3% withholding tax.",
+        "three": "SMS2BUY is a SMS provider for both business and juristic individuals, We do not encourage any illegal use. SMS2BUY will not be responsible to any illegal activities found using. Expenses are not refundable in this case. SMS2BUY reserves the right to suspend the service in all cases if prosecution are occurred.",
+        "four": "This pricing rate is for SMS marketing and SMS OTP only. Please contact us for pricing rate of Location-based service through  (+66)649414363"
+      }
+    },
+    "contact_us": {
+      "title": "Contact Us"
+    },
+    "packages": {
+      "s": "Package S",
+      "a": "Package A",
+      "b": "Package B",
+      "c": "Package C",
+      "d": "Package D",
+      "e": "Package E",
+      "enterprise_package": "Enterprise Package",
+      "1_year": "1 Year",
+      "2_years": "2 Years",
+      "3_years": "3 Years",
+      "baht": "บาท",
+      "buy_now": "Buy Now",
+      "note": "Note"
+    }
+  },
+  "sms_marketing_page": {
+    "banner": {
+      "title": "SMS Marketing"
+    },
+    "powerful_mkt_tool": "A powerful marketing tool at pocket-friendly prices",
+    "powerful_mkt_tool_desc": "Have you ever known that SMS marketing has existed for over 20 years? Despite being a senior of most marketing tools, SMS marketing is now widely used than ever and gaining popularity day by day. It allows businesses to deliver customers a great experience and build a good relationship with them by updating them.",
+    "reason_choice_section": {
+      "title": "Why should SMS2BUY be your first choice for SMS marketing?",
+      "items": {
+        "support_team": "24/7 Support Team",
+        "messages_sent_in_one_sec": "Messages are Sent in 1 sec",
+        "reaching_over_100K_customers": "Reaching over 100K customers",
+        "sending_every_language_in_the_world": "Sending every Language in the World",
+        "real_time_reporting": "Real-time reporting",
+        "personalized_messaging": "Personalized Messaging"
+      }
+    },
+    "badge": {
+      "title": "Allows you to communicate better with your customers and optimize your marketing effectiveness",
+      "button_text": "View Pricing & Packages"
+    },
+    "reason_use_section": {
+      "title": "Why should you use SMS Marketing?",
+      "items": {
+        "accurately_capture_the_target_audience": "Accurately capture the target audience",
+        "boost_sale": "Boost Sale",
+        "real_time_reporting": "Real-time reporting",
+        "built_customer_loyalty": "Built Customer Loyalty",
+        "ctr": "Increase Click-Through rate (CTR) for url by up to 19%",
+        "affordable_prices": "Affordable Prices"
+      }
+    },
+    "contact_us": {
+      "title": "Contact Us"
+    }
+  },
+  "sms_otp_page": {
+    "banner": {
+      "title": "SMS <br /> OTP"
+    },
+    "improves_the_security": "Improves the security in your business with SMS OTP authentication",
+    "description": "SMS OTP, also known as SMS One-Time-Password, is a 6-digit code for two-factor authentication. It is an extra layer of protection used to ensure the security of financial transactions and online accounts. In the SMS OTP authentication method, OTP is sent via SMS text to the user’s phone. The user receives the OTP and enters it on the device where the authentication is happening. The OTP must be used within a specific time frame, reducing the risk of fraud in online transactions.",
+    "reason_section": {
+      "title": "Why should you choose SMS2BUY for SMS OTP service?",
+      "items": {
+        "covering_all_networks": "Covering All Networks",
+        "customize_validity_period": "Customize Validity Period",
+        "customize_text_messages": "Customize Text Messages",
+        "easiest_api_system_to_use": "The easiest API system to use",
+        "no_need_to_install_additional_program": "No need to install additional program",
+        "delivering_messages_within_1_3_sec": "Delivering messages within 1-3 sec",
+        "more_secure_with_ssl_encryption": "More secure with SSL encryption",
+        "highly_stable_system_with_uptime_guarantee": "Highly stable system with Uptime guarantee 99.98%"
+      }
+    },
+    "badge": {
+      "title": "Allows you to communicate better with your customers and optimize your marketing effectiveness",
+      "button_text": "View Pricing & Packages"
+    },
+    "advantages_section": {
+      "title": "The Advantages of Using SMS OTP",
+      "accurately_capture_the_target_audience": "Accurately capture the target audience",
+      "boost_sale": "Boost Sale",
+      "real_time_reporting": "Real-time Reporting",
+      "built_customer_loyalty": "Built Customer Loyalty",
+      "ctr": "Increase Click-Through rate (CTR) for url by up to 19%",
+      "affordable_prices": "Affordable Prices"
+    },
+    "contact_us": {
+      "title": "Contact Us"
+    }
+  },
+  "footer": {
+    "services": "Services",
+    "product": "Product",
+    "resource": "Resource",
+    "sms_mkt": "SMS Marketing",
+    "sms_otp": "SMS OTP",
+    "sms_otp_home": "SMS OTP",
+    "pricing": "Pricing",
+    "contact": "Contact Us",
+    "blog": "Blog",
+    "faq": "FAQs",
+    "search": "Search",
+    "address": "420/163 Chiang Mai-Lampang Road, T. Nong Pa Khrang, A. Mueang Chiang Mai, J. Chiang Mai",
+    "help": "Help",
+    "term_conditions": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "policy": "Cookie Policy",
+    "copyright": "Copyright @2024 MODAI. All rights reserved."
+  },
+  "faqs": {
+    "questions": {
+      "1": "Question1?",
+      "2": "Question2?",
+      "3": "Question3?",
+      "4": "Question4?",
+      "5": "Question5?",
+      "6": "Question6?",
+      "7": "Question7?",
+      "8": "Question8?",
+      "9": "Question9?",
+      "10": "Question10?",
+      "11": "Question11?",
+      "12": "Question12?",
+      "13": "Question13?",
+      "14": "Question14?",
+      "15": "Question15?",
+      "16": "Question16?",
+      "17": "Question17?",
+      "18": "Question18?",
+      "19": "Question19?",
+      "20": "Question20?",
+      "21": "Question21?"
+    },
+    "answer": {
+      "1": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "2": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "3": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "4": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "5": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "6": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "7": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "8": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "9": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "10": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "11": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "12": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "13": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "14": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "15": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "16": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "17": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "18": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "19": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "20": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages.",
+      "21": "On the website, the maximum is 3 messages. When using API, the maximum is 5 messages."
+    },
+    "general_questions": "General Questions",
+    "order_payment": "Order & Payment",
+    "technical_problems": "Technical Problems"
+  },
+  "components": {
+    "services": {
+      "read_more": "Read more"
+    },
+    "pkgs": {
+      "num_of_msg": "Number of Messages",
+      "validity_period": "Validity Period"
+    },
+    "faq": {
+      "title_header": "Search your questions",
+      "description": "Have any questions? We&apos;d love to hear from you",
+      "read_more": "Read More",
+      "title": "FAQs"
+    },
+    "contact_us": {
+      "submitted_form_msg": {
+        "modal": {
+          "title": "Thank you!",
+          "message": "Thank you for your submission. We will check and get back to you shortly!"
+        }
+      }
+    },
+    "form": {
+      "customize_text_messages": "Customize Text Messages",
+      "question": "Why is the SMS2BUY system so quick and stable? →",
+      "send": "Send Now",
+      "message": "From support to shout-outs, we’re here for it all. Send us a message to",
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Your phone",
+      "your_message": "Your message",
+      "have_question": "Have a question or feedback? <br/> Reach out to us!",
+      "login": "Log in"
+    },
+    "header": {
+      "send_sms": "Send SMS messages through website by yourself, fast, easy, measurable.",
+      "sms_api": "SMS API Service for developers, connecting with your chosen programing languages."
+    }
+  },
+  "terms": {
+    "acceptance": "<h4>1. Acceptance of Terms </h4> <p>By accessing and using our website, you agree to be bound by these terms and conditions. If you do not agree with any part of these terms, you should not use our website.</p> ",
+    "user_conduct": "<h4>2. User Conduct</h4> <p>You agree that you will not:</p> <p> - Violate any applicable laws or regulations </p> <p>- Disrupt the functioning of the website or related services</p> <p>- Collect or gather personal information or data without proper authorization</p> <p> - Post or transmit unlawful or harmful material </p>",
+    "disclaimer": "<h4>3. Disclaimer of Liability</h4> <p>This website is provided on an 'as is' and 'as available' basis without any warranties or guarantees of any kind. We do not guarantee the accuracy, completeness, or reliability of the content and materials on this website. </p>",
+    "limitation": "<h4>4. Limitation of Liability </h4> <p>In no event shall sms2buy be liable to you for any direct, indirect, consequential, incidental, or other damages arising from the use of our website or the content on the website. </p>",
+    "governing_law": "<h4>5. Governing Law </h4><p>These terms and conditions shall be governed by and interpreted in accordance with the laws of Thailand. Any disputes arising from the use of this website shall be subject to the jurisdiction of the courts in Thailand.</p>"
+  },
+  "privacy_policy": {
+    "data_collection": "<h4>1. Data Collection </h4><p>We may collect personal information from users, such as names, email addresses, and contact information. This data will be used solely to provide and improve our services and will not be disclosed to third parties without proper authorization, unless required by law. </p>",
+    "cookies": "<h4>2. Cookies</h4> <p>Our website may use cookies to enhance the user experience. These cookies may track your browsing behavior on our website and help us improve our services. You can adjust your browser settings to reject cookies or receive notifications when cookies are being used.</p>",
+    "data_security": "<h4>3. Data Security</h4> <p>We implement appropriate security measures to protect against unauthorized access, alteration, disclosure, or destruction of personal data. However, please note that no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee the absolute security of data transmitted through our website.</p>",
+    "change": "<h4>4. Changes to Privacy Policy</h4> <p>We may update or revise this privacy policy from time to time as necessary. It is your responsibility to periodically review the privacy policy for important information regarding how we collect, use, and protect your data.</p> <p>If you have any questions or concerns about these terms and conditions or the privacy policy, please contact us at sale@sms2buy.com.</p> <p>Please note that these terms and conditions and privacy policy may be subject to change to ensure compliance with current laws and relevant legal requirements governing the use of our website.</p><p>By accessing and using our website, and by engaging in any actions or giving consent on our website, you are deemed to have agreed to be bound by these terms and conditions and privacy policy.</p>"
+  }
+}

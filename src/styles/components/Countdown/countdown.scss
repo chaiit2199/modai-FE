@@ -1,0 +1,61 @@
+.countdown {
+  @apply flex items-center justify-center py-4 px-4;
+
+
+  &__wrapper {
+    @apply bg-white rounded-lg overflow-hidden shadow_primary text-center;
+
+    .date {
+      @apply text-black mb-1 bg-primary p-2;
+    }
+  }
+}
+
+
+
+.flip-unit {
+  @apply mx-3;
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  @apply flex items-center justify-center;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card.flipping .flip-card-inner {
+  animation: flip-up 0.6s ease-out forwards;
+}
+
+.flip-card-front,
+.flip-card-back {
+  @apply absolute w-full h-full flex items-center justify-center text-3xl rounded-lg font-bold shadow_primary;
+  backface-visibility: hidden;
+  background: linear-gradient(to bottom, #000000, #111);
+}
+
+.flip-card-back {
+  transform: rotateX(180deg);
+}
+
+.flip-label {
+  @apply mt-2 text-black font-bold text-center uppercase;
+}
+
+/* Keyframes for flipping animations */
+@keyframes flip-up {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(180deg);
+  }
+}

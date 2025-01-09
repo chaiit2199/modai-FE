@@ -1,0 +1,159 @@
+.pkg-card {
+  &-container {
+    width: 476px;
+
+    @media only screen and (max-width: 576px) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 500px) {
+      width: 343px;
+    }
+  }
+
+  &-wrapper {
+    width: 100%;
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), 0px 4px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 0 32px 32px 32px;
+    transition: box-shadow 0.5s;
+    overflow: hidden;
+
+    @media only screen and (max-width: 768px) and (min-width: 600px) {
+      padding: 0 16px 16px 16px;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), 0px 6px 12px rgba(0, 0, 0, 0.1), 0px 8px 34px rgba(0, 0, 0, 0.07);
+      transition: box-shadow 0.5s;
+    }
+  }
+
+  &-gold-pkg {
+    border-radius: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -3px;
+      border-radius: inherit;
+      background-image: linear-gradient(90deg, #E4D987 0%, #DFBE4C 101.26%);
+    }
+
+    .top-line-gold {
+      height: 8px;
+      width: 100%;
+      position: absolute;
+      background-image: linear-gradient(90deg, #E4DC90 0%, #DEBE4B 69.27%);
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__topline-pkg-first {
+    position: absolute;
+    height: 8px;
+    background-image: linear-gradient(90deg, #3E0DFF 0%, #4DDF6D 69.27%);
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__topline-pkg-second {
+    position: absolute;
+    height: 8px;
+    background-image: linear-gradient(90deg, #4DDF6D 0%, #A45DFF 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__topline-pkg-third {
+    position: absolute;
+    height: 8px;
+    background-image: linear-gradient(90deg, #A45DFF 0%, #3F0DFF 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__header {
+    margin-top: 40px;
+    margin-bottom: 32px;
+
+    @media only screen and (max-width: 768px) and (min-width: 600px) {
+      margin-top: 32px;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 36px;
+
+      color: rgba(0, 0, 0, 0.6);
+
+      @media only screen and (max-width: 768px) and (min-width: 600px) {
+        font-size: 24px;
+      }
+    }
+
+    &__price {
+      font-size: 40px;
+      line-height: 56px;
+
+      color: #000000;
+
+      @media only screen and (max-width: 768px) and (min-width: 600px) {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &__body {
+    &__item {
+      padding: 7px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+      font-size: 20px;
+      line-height: 36px;
+
+
+      @media only screen and (max-width: 768px) and (min-width: 600px) {
+        font-size: 18px;
+      }
+
+      .text {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 32px;
+
+    .button-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+
+      @media only screen and (max-width: 768px) and (min-width: 600px) {
+        height: 56px;
+      }
+    }
+  }
+}

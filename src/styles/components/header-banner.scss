@@ -1,0 +1,141 @@
+.banner-component {
+  margin-bottom: 40px;
+  position: relative;
+  padding: 50px 0;
+  display: flex;
+
+  &--main {
+    @apply shadow_primary w-max min-w-[300px];
+
+    .leagueName {
+      @apply flex items-center text-xl p-2 bg-primary w-max border-l-4 mb-4 border-white;
+
+      >img {
+        @apply w-7 h-7 mr-2;
+      }
+    }
+
+    table {
+      @apply w-full;
+    }
+
+    .table_wrap {
+      @apply w-full bg-white rounded-md overflow-hidden;
+
+      th,
+      td {
+        @apply px-4 text-left text-black;
+      }
+
+      th {
+        @apply bg-main py-2;
+      }
+
+      td {
+        @apply py-4;
+      }
+
+      >li {
+        @apply w-1/2;
+      }
+    }
+  }
+
+  &__countdown {
+    @apply flex justify-end;
+  }
+
+  .overlay {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+    }
+
+    >img {
+      opacity: 0.4;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__inner {
+    @apply relative z-1 text-white;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+
+  &__description {
+    margin-top: 24px;
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 605px;
+    color: rgba(255, 255, 255, 0.7);
+
+
+    @media screen and (max-width: 1280px) {
+      max-width: 505px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &.--small {
+      max-width: 375px;
+
+      @media screen and (max-width: 600px) {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__content {
+    @apply w-2/3 flex;
+  }
+
+  &__title {
+    @apply text-white relative mr-10 uppercase w-[260px];
+    font-size: 48px;
+  }
+
+  &__options {
+    @apply h-1 flex;
+
+    >div {
+      @apply h-1 transition-all;
+    }
+  }
+
+  &__extra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 407px;
+    column-gap: 16px;
+    margin-top: 40px;
+
+    @media screen and (max-width: 1023px) {
+      justify-content: flex-start;
+    }
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      row-gap: 16px;
+      max-width: 100%;
+    }
+
+    .button-container {
+      padding: 18px 36px;
+      height: auto;
+
+      @media screen and (max-width: 500px) {
+        width: 100%;
+        height: 56px;
+      }
+    }
+  }
+}

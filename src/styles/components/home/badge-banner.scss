@@ -1,0 +1,119 @@
+.home-page__badge-banner {
+  &-container {
+    background: linear-gradient(241.67deg, #A45CFF 9.29%, #3C0CFF 85.94%);
+  }
+
+  &__wrapper {
+    padding: 80px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 120px;
+    flex: 1;
+    gap: 30px;
+
+    @media only screen and (max-width: 1366px) {
+      padding: 60px 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: unset;
+      align-items: baseline;
+      margin-right: 20px;
+      padding: 32px 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding: 64px 0;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 1109px;
+
+      @media only screen and (min-width: 1280px) {
+        width: 80%;
+        max-width: 1109px;
+      }
+
+      @media only screen and (max-width: 1279px) {
+        width: 75%;
+        max-width: 1109px;
+      }
+
+      @media only screen and (max-width: 1112px) {
+        width: 73%;
+        max-width: 1109px;
+      }
+
+      @media only screen and (max-width: 900px) {
+        width: 70%;
+        max-width: 1109px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      .title {
+        font-size: 56px;
+        line-height: 67px;
+
+
+        @media only screen and (max-width: 1440px) {
+          font-size: 48px;
+        }
+
+        @media only screen and (max-width: 1280px) {
+          font-size: 36px;
+          line-height: 48px;
+        }
+
+        @media only screen and (max-width: 600px) {
+          font-size: 28px;
+          line-height: 32px;
+        }
+      }
+
+      .description {
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: -0.01em;
+        margin-top: 16px;
+
+        @media only screen and (max-width: 1440px) {
+          font-size: 24px;
+        }
+
+        @media only screen and (max-width: 766px) {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .btn-wrapper {
+      max-width: 229px;
+      width: 100%;
+
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        max-width: unset;
+      }
+
+      .button-container {
+        padding: 12px 61.5px;
+        width: 100%;
+
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+          padding: 12px 3.1vw;
+        }
+      }
+    }
+  }
+}

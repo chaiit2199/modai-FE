@@ -1,0 +1,66 @@
+.bg_mode {
+  background-color: #fff;
+}
+
+.not_bg_mode {
+  background-color: #1a1a1a;
+}
+
+.not_text_mode {
+  color: #fff;
+}
+
+.text_mode {
+  color: #1a1a1a;
+}
+
+.is_dark {
+  .bg_mode {
+    background-color: #1a1a1a;
+  }
+
+  .not_text_mode {
+    color: #1a1a1a;
+  }
+
+  .not_bg_mode {
+    background-color: #fff;
+  }
+
+  .text_mode {
+    color: #fff;
+  }
+}
+
+body.is_dark {
+  @apply bg-black;
+}
+
+@import "./common.scss";
+@import "./custom.scss";
+@import "./components/shared/button.scss";
+@import "./components/shared/sms2buy-line.scss";
+@import "./components/shared/pkg.scss";
+@import "./components/shared/srv.scss";
+@import "./components/header-banner.scss";
+@import "./components/shared/input.scss";
+@import "./components/shared/dropdown.scss";
+@import "./components/shared/modal.scss";
+@import "./components/shared/select-tags.scss";
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/contact-us.scss";
+@import "./components/faq.scss";
+@import "./components/terms.scss";
+@import "./components/news.scss";
+@import "./components/tab.scss";
+@import "./components/swiper.scss";
+@import "./components/table.scss";
+@import "./components/Countdown/countdown.scss";
+@import "./home.scss";
+@import "./question.scss";
+@import "./calendar.scss";
+@import "./list.scss";
+@import "./form.scss";
+@import "./collapse.scss";
+@import "./components/modal.scss";

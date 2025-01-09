@@ -1,0 +1,20 @@
+.input-container {
+  @apply relative;
+
+  input {
+    @apply h-10 w-full py-2 px-4 rounded-xl border-none outline-none;
+    background: rgba(0, 0, 0, 0.05);
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &.has-icon {
+      padding-right: 50px;
+    }
+  }
+
+  .input-suffix {
+    @apply absolute right-4 top-2;
+  }
+}

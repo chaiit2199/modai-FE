@@ -1,0 +1,74 @@
+$primary-color: #8CC5B3;
+$primary-color-hover: #3c3c3c;
+$secondary-color: rgba(255, 255, 255, 0.2);
+$font: 'Inter', sans-serif;
+$shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.03);
+$color-main: #F1F5F9;
+
+.bg-primary {
+  background-color: $primary-color;
+  @apply text-white;
+
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+}
+
+.txt-primary {
+  color: $primary-color;
+}
+
+
+.bg-secondary {
+  background-color: $secondary-color;
+}
+
+.border-primary {
+  border-color: #F1F5F9;
+}
+
+.text-primary {
+  color: #94a3b8;
+}
+
+.shadow_primary {
+  box-shadow: $shadow;
+}
+
+.bg-main {
+  background-color: #F1F5F9;
+}
+
+.clamp-1,
+.clamp-2,
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clamp-1 {
+  -webkit-line-clamp: 1;
+
+}
+
+.clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+.bg-main-theme {
+  @apply bg-white;
+}
+
+.bg-dark-theme {
+  @apply bg-[#F1F5F9];
+}
+
+.color-themes {
+  @apply text-white;
+}

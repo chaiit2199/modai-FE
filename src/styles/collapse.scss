@@ -1,0 +1,47 @@
+.core_collapse {
+  @apply relative w-full;
+
+  .collapse__label {
+    @apply relative flex items-center w-full text_mode;
+
+    .icon {
+      @apply absolute right-0 w-2.5 h-2.5 transition-all;
+
+      &.active {
+        @apply rotate-180;
+      }
+    }
+
+  }
+
+  .react-calendar {
+    @apply absolute left-1/2 -translate-x-1/2 top-[45px];
+  }
+
+  .collapse__content {
+    @apply relative;
+  }
+
+  .react-calendar,
+  .collapse__content {
+    @apply mt-2 bg-white shadow_primary rounded-xl;
+  }
+
+  &.core_collapse__fixed {
+    .collapse__content {
+      @apply absolute z-1 left-1/2 -translate-x-1/2;
+    }
+  }
+}
+
+// <div className="core_collapse">
+//   <button className="collapse__label" onClick={toggleCollapse}>
+//     Collapse
+//     <img className={isCollapsed ? 'active' : ''} src="/icon/down.svg" alt="" />
+
+//   </button>
+//   <div className={`collapse__content ${isCollapsed ? 'collapsed' : 'hidden'}`}>
+//     <p>This content will be hidden or shown based on the collapse state.</p>
+//     <p>Additional content can go here.</p>
+//   </div>
+// </div>

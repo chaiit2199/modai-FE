@@ -1,0 +1,22 @@
+[data-aos="build-in-scale-top"] {
+  transition: transform .7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    transform: scaleY(1);
+  }
+}
+
+[data-aos="build-in-scale-fade"] {
+  opacity: 0;
+  transition: opacity .7s cubic-bezier(0.16, 1, 0.3, 1), transform .7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.96);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,216 @@
+.home-page__characteristic {
+  &-container {
+    color: white;
+    background-image: url('/images/characteristic-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__wrapper {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 120px;
+    padding-bottom: 96px;
+    flex: 1;
+
+
+
+    @media only screen and (max-width: 1366px) {
+      margin-right: 50px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      padding-bottom: 72px;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 930px) {
+      width: 78%;
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin-right: 70px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 61px;
+    flex: 1;
+
+    @media only screen and (max-width: 1200px) {
+      gap: 30px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: 600px) {
+      gap: 16px;
+    }
+
+    .title {
+      font-size: clamp(1.5625rem, -2.0938rem + 19.5vw, 4rem);
+
+
+      flex: 8;
+
+      @media only screen and (max-width: 600px) {
+        line-height: 52px;
+      }
+
+    }
+
+    .desc {
+      flex: 4;
+      width: 476px;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.01em;
+      color: rgba(255, 255, 255, 0.7);
+
+      @media only screen and (max-width: 1440px) {
+        font-size: 14px;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 12px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        font-size: 18px;
+        line-height: 28px;
+        width: auto;
+      }
+    }
+  }
+
+  &__features {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    row-gap: 20px;
+
+    @media only screen and (max-width: 768px) {
+      margin-top: 64px;
+    }
+
+    .item {
+      flex: 50%;
+      padding-bottom: 20px;
+
+      @media only screen and (max-width: 600px) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      &.--underline {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .title {
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: -0.01em;
+        color: rgba(255, 255, 255, 0.7);
+
+        @media only screen and (max-width: 1440px) {
+          font-size: 24px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+          font-size: 20px;
+          line-height: 20px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          font-size: 18px;
+        }
+
+        @media only screen and (max-width: 600px) {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+
+      .value {
+        margin-top: 8px;
+        font-size: clamp(2.3125rem, -0.2188rem + 13.5vw, 4rem);
+
+
+
+        @media only screen and (max-width: 1440px) {
+          // font-size: 52px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+          // font-size: 48px;
+          line-height: 48px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          // font-size: 36px;
+          line-height: 36px;
+        }
+
+        @media only screen and (max-width: 600px) {
+          // font-size: 48px;
+          line-height: 56px;
+        }
+      }
+    }
+  }
+
+  &__reason {
+    margin-top: 64px;
+
+    @media only screen and (max-width: 600px) {
+      text-align: center;
+    }
+
+    a {
+      font-size: 20px;
+      line-height: 28px;
+
+      background-image: linear-gradient(235.25deg, #FF2EAB -9.29%, #76D899 91.26%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+
+      @media only screen and (max-width: 1440px) {
+        font-size: 18px;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 16px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 20px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        height: 2px;
+        background-image: linear-gradient(235.25deg, #FF2EAB -9.29%, #76D899 91.26%);
+
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

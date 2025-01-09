@@ -1,0 +1,277 @@
+.loading:hover path {
+  fill: red;
+}
+
+.loading {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 2000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 2000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.list-item {
+
+  .item-inner,
+  li {
+    @apply flex items-center text-sm py-2 px-4 border-none;
+
+    img {
+      @apply w-4 h-4 mr-3;
+    }
+  }
+}
+
+.f-match__title {
+  @apply py-2 mb-0.5 bg_mode text_mode flex items-center px-4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.f-match__logo {
+  @apply mr-3 w-6 h-6 p-1 not_bg_mode rounded;
+}
+
+.f-match {
+  @apply p-4 flex items-center;
+
+  .finalOdd {
+    @apply text-[10px] p-1.5 rounded-lg bg-main not_text_mode;
+  }
+
+  >p {
+
+    &:nth-child(3),
+    &:nth-child(1) {
+      @apply w-[46%]
+    }
+
+    &:nth-child(2) {
+      @apply w-[8%]
+    }
+  }
+
+  &:hover {
+    background-color: $primary-color-hover;
+    @apply cursor-pointer;
+  }
+
+  .f-match__item {
+    width: 42%;
+    display: flex;
+    align-items: center;
+    @apply text_mode;
+  }
+
+
+
+  .f-match__score {
+    @apply flex items-center w-[16%] mx-4 text_mode justify-center;
+
+    &__status {
+
+      >span,
+      >p {
+        @apply block;
+
+        &.goal {
+          @apply text-white font-md;
+          animation: blink 1s infinite;
+        }
+
+        @apply w-5 min-w-5 flex items-center justify-center h-5 rounded-md mx-1;
+      }
+    }
+
+
+  }
+}
+
+
+/* animation blink */
+@keyframes blink {
+  0% {
+    opacity: 1;
+    background: #2ecc71;
+  }
+
+  50% {
+    opacity: 0.5;
+    background: #e74c3c;
+  }
+
+  100% {
+    opacity: 1;
+    background: #2ecc71;
+  }
+}
+
+.info-component {
+  @apply p-4 rounded-md overflow-hidden text-xs;
+  @apply bg-main;
+
+  .title {
+    @apply text-lg font-smb text-center mb-2;
+  }
+
+  .items {
+    @apply flex w-1/2 items-center justify-end;
+
+    .icon {
+      @apply w-4 h-4 mx-1.5;
+    }
+
+    &:nth-child(1) {
+
+      @apply relative pr-2;
+
+      &::after {
+        @apply absolute top-0 text-black;
+        right: -3px;
+        content: "-";
+        top: 0px;
+        z-index: 9;
+      }
+    }
+
+    &:nth-child(2) {
+      @apply flex-row-reverse justify-end pl-2;
+    }
+  }
+}
+
+.matches_item {
+  @apply p-3 bg-white flex items-center justify-center flex-col relative;
+
+  &.matches_inner {
+    @apply rounded-lg overflow-hidden;
+
+    &:not(:last-child) {
+      @apply mb-2;
+      ;
+    }
+  }
+
+  &:not(:last-child) {
+    @apply border-b border-primary border-solid;
+  }
+
+  &--center {
+    @apply justify-center;
+  }
+
+  .item {
+    @apply flex items-center justify-center;
+
+    >img {
+      @apply w-5 h-5;
+    }
+
+    .score {
+      @apply mx-4 py-1 px-4 rounded-lg overflow-hidden bg-[#28a745] text-white;
+    }
+  }
+
+  .date {
+    @apply text-xs txt-primary mb-1;
+  }
+}
+
+.matches_title {
+  @apply flex items-center mb-4 text-2xl;
+
+  >img {
+    @apply mr-2 w-6 h-6;
+  }
+}
+
+.head-to-head {
+  @apply flex justify-center bg-primary py-4;
+
+  &--item {
+    @apply flex items-center;
+
+    &:nth-child(1) {
+      .response {
+        @apply bg-[#ff9966];
+      }
+    }
+
+    &:last-child {
+      .response {
+        @apply bg-[#ffc107];
+      }
+    }
+
+    >img {
+      @apply w-5 h-5 mx-2;
+    }
+  }
+
+  &--list {
+    @apply flex items-center;
+
+  }
+
+  >.response {
+    @apply shadow bg-white text-black;
+  }
+
+  .response {
+    @apply py-1 px-4 rounded-xl overflow-hidden;
+  }
+
+}
