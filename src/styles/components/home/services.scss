@@ -1,0 +1,61 @@
+.home-page__services-section {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 120px;
+  padding-bottom: 96px;
+  flex: 1;
+
+  @media only screen and (max-width: 1366px) {
+    margin-right: 70px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 0 16px;
+  }
+
+  .title {
+    font-size: 64px;
+
+
+
+    @media only screen and (max-width: 1366px) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-top: 12px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 48px;
+      line-height: 48px;
+      margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      text-align: left;
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  &__items {
+    --gap: 30px;
+    --num-of-item: 2;
+    margin-top: 57px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: var(--gap);
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    .item {
+      flex-basis: calc(100%/var(--num-of-item) - var(--gap) + var(--gap)/var(--num-of-item));
+    }
+
+    .srv-card-container {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.core_modal {
+  @apply fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center;
+
+  &__bg {
+    @apply absolute top-0 left-0 w-full h-full bg-black opacity-50;
+  }
+
+  &__inner {
+    @apply flex flex-col rounded-2xl bg-white shadow relative z-10 max-w-[990px] w-full p-8;
+    max-height: calc(100vh - 100px);
+  }
+
+  &__header {
+    @apply flex items-center justify-between sticky top-0 text-3xl font-smb mb-6;
+  }
+
+  &__content {
+    @apply flex-auto overflow-x-auto;
+  }
+}

@@ -1,0 +1,75 @@
+ main {
+   overflow-x: hidden;
+ }
+
+ .container {
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+ }
+
+ .container-inner {
+   width: 100%;
+   max-width: 1000px;
+   padding: 0 15px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .container-small {
+   width: 100%;
+   max-width: 600px;
+   padding: 0 15px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .d-flex {
+   display: flex;
+ }
+
+ .flex-wrap {
+   flex-wrap: wrap;
+ }
+
+ .flex-items-center {
+   align-items: center;
+ }
+
+ .flex-column {
+   flex-direction: column;
+ }
+
+ .position-relative {
+   position: relative;
+ }
+
+ .position-absolute {
+   position: absolute;
+ }
+
+ .height-full {
+   height: 100% !important;
+ }
+
+ .sms-title {
+   font-size: 64px;
+
+   @media only screen and (max-width: 1260px) {
+     font-size: 50px;
+   }
+
+   @media only screen and (max-width: 900px) {
+     font-size: 40px;
+     line-height: 50px;
+   }
+ }
+
+ .opacity-80 {
+   opacity: 80%;
+ }
+
+ .flex-1 {
+   flex: 1;
+ }

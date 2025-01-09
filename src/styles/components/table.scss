@@ -1,0 +1,54 @@
+.core_table {
+  border: 1px solid $color-main;
+  @apply rounded-lg overflow-hidden;
+
+  table {
+    @apply w-full table-fixed;
+
+    th,
+    td {
+      @apply py-2 px-4 text-black;
+    }
+
+    tr {
+      &:not(:last-child) {
+        @apply border-b border-solid;
+        border-color: $color-main;
+
+      }
+
+      &:hover {
+        background-color: $color-main;
+      }
+    }
+
+    th {
+      @apply font-smb py-4 text-white;
+      background-color: $primary-color;
+    }
+  }
+}
+
+.is_dark {
+
+  .core_table {
+
+    table {
+
+      th,
+      td {
+        @apply text-white;
+      }
+
+      tr {
+        &:hover {
+
+          th,
+          td {
+            @apply text-black;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@mixin button-gradient-animation($btnType, $transTime ) {
+  background-size: 100%;
+  position: relative;
+  z-index: 10;
+
+  @if $btnType =='black' {
+    background: #000000;
+
+    &:before {
+      border-radius: 10px;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      z-index: -10;
+      transition: opacity $transTime;
+      background-image: linear-gradient(0deg, #282828, #282828), linear-gradient(241.67deg, #A45CFF 9.29%, #3C0CFF 85.94%);
+    }
+  }
+
+  @else if $btnType =='primary' {
+    background-image: linear-gradient(241.67deg, #A45CFF 9.29%, #3C0CFF 85.94%);
+
+    &:before {
+      border-radius: 10px;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      z-index: -10;
+      transition: opacity $transTime;
+      background-image: linear-gradient(0deg, rgba(128, 72, 204, 0.5), rgba(128, 72, 204, 0.5)), linear-gradient(241.67deg, #A45CFF 9.29%, #3C0CFF 85.94%);
+    }
+  }
+
+  @else if $btnType =='ghost' {
+    border: 1px solid #000000;
+    background-color: transparent;
+
+    &:before {
+      border-radius: 10px;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      opacity: 0;
+      width: 100%;
+      z-index: -10;
+      transition: opacity $transTime;
+      background: linear-gradient(white, white) padding-box, linear-gradient(241.67deg, #A45CFF 9.29%, #3C0CFF 85.94%) border-box;
+      border: 2px solid transparent;
+    }
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}

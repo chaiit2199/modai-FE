@@ -1,0 +1,66 @@
+.home-page {
+  @apply my-8 overflow-x-hidden flex flex-col w-full;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .inner-section {
+    border-radius: 0.75rem;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1rem;
+    @apply bg_mode;
+
+    &--title {
+      @apply py-2 bg-main flex items-center px-4 mb-4;
+    }
+  }
+
+  .inner-section h6 {
+    padding: 1rem;
+  }
+
+  .list-item-tournament .item-inner,
+  .list-item-tournament li {
+    display: flex;
+    align-items: center;
+    border-style: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    @apply text_mode;
+  }
+
+  .list-item-tournament .item-inner img,
+  .list-item-tournament li img {
+    margin-right: 0.75rem;
+    height: 1rem;
+    width: 1rem;
+  }
+
+
+  .faq-container {
+    padding-top: 96px;
+
+    .faq__wrapper {
+      .content {
+        max-width: 729px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .contact-us__container .contact-us__container__form__title {
+    margin-bottom: 24px;
+  }
+}
+
+@import "./components/home/advantages.scss";
+@import "./components/home/badge-banner.scss";
+@import "./components/home/services.scss";

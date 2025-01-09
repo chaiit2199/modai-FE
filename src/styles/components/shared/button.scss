@@ -1,0 +1,10 @@
+@import "../../mixins.scss";
+@import "../../variables.scss";
+
+.button-container {
+  @apply cursor-pointer font-md py-3 px-4 rounded-xl border-none flex items-center justify-center h-10;
+
+  &.btn-primary {
+    @apply bg-primary;
+  }
+}

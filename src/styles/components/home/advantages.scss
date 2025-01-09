@@ -1,0 +1,114 @@
+.home-page__advantages-section {
+  width: 100%;
+  padding-bottom: 116px;
+  margin-left: 20px;
+  flex: 1;
+
+  @media only screen and (max-width: 1440px) {
+    padding-bottom: 64px
+  }
+
+  @media only screen and (max-width: 1366px) {
+    margin-right: 50px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    margin-right: 120px;
+    padding-bottom: 0
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 50px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 0 16px;
+    padding-bottom: 64px;
+  }
+
+  &__title {
+    // font-size: 64px;
+    font-size: clamp(1.5625rem, -2.0938rem + 19.5vw, 4rem);
+
+
+
+    @media only screen and (max-width: 1366px) {
+      // font-size: 60px;
+      line-height: 60px;
+      margin-top: 12px;
+    }
+
+    @media only screen and (max-width: 1280px) {
+      // font-size: 48px;
+      line-height: 48px;
+      margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      text-align: center;
+      // font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  &__items {
+    --gap: 30px;
+    --num-of-item: 4;
+    margin-top: 57px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: var(--gap);
+
+    @media only screen and (max-width: 1024px) {
+      --num-of-item: 2;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media only screen and (max-width: 600px) {
+      --num-of-item: 1;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: calc(100%/var(--num-of-item) - var(--gap) + var(--gap)/var(--num-of-item));
+
+    @media only screen and (max-width: 1280px) {
+      max-width: 250px;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 1100px) {
+      max-width: 200px;
+      width: 100%;
+    }
+
+    .icon {
+      height: 220px;
+    }
+
+    .item-content {
+      padding: 20px 0;
+      min-height: 160px;
+
+      .title {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      .description {
+        margin-top: 8px;
+        font-size: 18px;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.6);
+        letter-spacing: -0.01em;
+      }
+    }
+  }
+}

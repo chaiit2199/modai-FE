@@ -1,0 +1,34 @@
+.news {
+  &_item {
+    @apply flex items-center px-4;
+
+    &:not(:last-child) {
+      @apply mb-4;
+    }
+
+    &__image {
+      width: 100px;
+      min-width: 100px;
+      @apply mr-2 rounded-lg overflow-hidden;
+
+      img {
+        height: 70px;
+        @apply object-cover transition-all;
+      }
+    }
+
+    &__title {
+      @apply text-sm font-smb;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+
+      .news_item__title {
+        @apply underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.swiper-pagination {
+  @apply flex justify-center mt-2;
+
+  .swiper-pagination-bullet {
+    @apply w-2 h-2 rounded-full opacity-30 mx-1;
+    @apply bg-main;
+
+    &:hover,
+    &.swiper-pagination-bullet-active {
+      @apply opacity-100;
+    }
+  }
+}

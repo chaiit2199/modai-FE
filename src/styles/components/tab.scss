@@ -1,0 +1,28 @@
+.core_tab {
+  &__menu {
+    @apply flex items-center;
+
+    >li {
+      @apply py-2 mr-4 border-b-2 border-solid border-transparent cursor-pointer capitalize text-base;
+
+      @apply outline-none;
+
+      &:hover,
+      &.react-tabs__tab--selected {
+        @apply border-black;
+      }
+    }
+  }
+
+  &__label {
+    @apply pt-4 pb-2 px-4 flex items-center cursor-pointer;
+
+    >li {
+      @apply mr-2 py-2.5 px-4 rounded-xl bg-secondary;
+
+      &.active {
+        @apply bg-primary;
+      }
+    }
+  }
+}
