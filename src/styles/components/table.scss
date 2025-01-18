@@ -1,32 +1,50 @@
 .core_table {
   border: 1px solid $color-main;
-  @apply rounded-lg overflow-hidden;
+  @apply rounded-lg overflow-hidden w-full;
 
-  table {
+  &--auto {
+    @apply table-auto;
+  }
+
+ 
+
+  &--fixed {
+    @apply table-fixed;
+  }
     @apply w-full table-fixed;
 
     th,
     td {
-      @apply py-2 px-4 text-black;
+      @apply p-4 text-black align-top;
+      @apply text_mode;
+
+      &.border-right {
+        @apply border-r border-solid;
+        border-color:  rgba(255, 255, 255, 0.1);
+      }
     }
 
     tr {
       &:not(:last-child) {
         @apply border-b border-solid;
-        border-color: $color-main;
+        border-color:  rgba(255, 255, 255, 0.1);
 
       }
 
+      &.not_target {
+        &:hover {
+        background-color: transparent;
+        }
+      }
+
       &:hover {
-        background-color: $color-main;
+        background-color: $primary-color-hover;
       }
     }
 
     th {
-      @apply font-smb py-4 text-white;
-      background-color: $primary-color;
-    }
-  }
+      @apply py-4 text-white;
+    } 
 }
 
 .is_dark {

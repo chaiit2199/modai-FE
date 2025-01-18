@@ -12,17 +12,11 @@ export default function Home() {
   const { locale } = useRouter();
 
   return (
-    <Layout className="home-page">
-      {/* <HeaderBannerComponent
-        title={t('home.banner.title')}
-        description={t('home.banner.description')}
-      /> */}
+    <Layout className="home-page"> 
       <div className='home-page__container container-inner'>
-        <div className='home-page__content mb-20'>
-
+        <div className='home-page__content'>
           <div className='col-span-1 '>
             <TopTournaments />
-
           </div>
           <FilterComponent />
         </div>

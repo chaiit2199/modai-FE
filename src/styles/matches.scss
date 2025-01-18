@@ -1,0 +1,61 @@
+.matches_details {
+    @apply flex items-center justify-center text_mode;
+    &:not(:last-child) {
+        @apply mb-4;
+    }
+
+    .mathches__item {
+        @apply flex items-center w-[35%] text-xs;
+        &:last-child {
+            @apply justify-end;
+        }
+    } 
+    .mathches__date {
+        @apply text-primary text-[10px] font-rg;
+    }
+
+    .mathches__response {
+        @apply w-[30%] text-center;
+    }
+
+    .mathches__score {
+        @apply mb-1 text-xs;
+    }
+
+    .mathches__logo {
+        @apply w-6 h-6 p-1 not_bg_mode rounded;
+    }
+}
+
+.matches_wrap {
+    @apply flex justify-between;
+    .matches__side-bar {
+        @apply w-[370px];
+    }
+    .matches__body {
+        width: calc(100% - 400px);
+        @apply mx-auto;
+    }
+}
+
+.odds__item {
+    @apply inline-block;
+    .odd {
+        @apply py-2 px-4 rounded-lg not_bg_mode not_text_mode inline-block mb-3;
+        &:not(:last-child) {
+            @apply mr-3;
+        }
+    }
+}
+
+.player_logo {
+    @apply w-8 h-8 overflow-hidden rounded-full bg-white;
+}
+
+.player__injuries {
+    @apply flex items-center text_mode; 
+}
+
+.reasonInjure {
+    @apply text-[#A3A3A3] text-xs;
+}

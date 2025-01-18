@@ -57,7 +57,7 @@ function Header() {
             <Link href={'/'} className="logo" locale={locale}>
               <Logo />
             </Link>
-            <div className={`${navActive ? 'active' : ''} nav__menu-list`}>
+            {/* <div className={`${navActive ? 'active' : ''} nav__menu-list`}>
               {MENU_LIST.map((menu, idx) => (
                 <div
                   onClick={() => handleOnClickMenu(menu)}
@@ -67,7 +67,7 @@ function Header() {
                   <MenuItems items={menu} locale={locale} />
                 </div>
               ))}
-            </div>
+            </div> */}
 
             <div className="d-flex button-actions">
               <SelectLanguage />

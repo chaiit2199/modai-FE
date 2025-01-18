@@ -1,5 +1,5 @@
 .home-page {
-  @apply my-8 overflow-x-hidden flex flex-col w-full;
+  @apply my-8 overflow-x-hidden flex flex-col w-full flex-auto h-full;
 
   &__content {
     display: grid;
@@ -14,7 +14,7 @@
     @apply bg_mode;
 
     &--title {
-      @apply py-2 bg-main flex items-center px-4 mb-4;
+      @apply font-md mb-4 text_mode;
     }
   }
 

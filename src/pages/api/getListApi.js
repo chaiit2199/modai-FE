@@ -28,13 +28,12 @@ export async function list(tab, name) {
   }
 }
 
-export async function listMatch(tab, date) {
+export async function listMatch(date) {
   const language = localStorage.getItem('language') || process.env.NEXT_PUBLIC_LANGUAGE;
   try {
-    const path = generatePath(API.MATCH.URL, { tab });
+    const path = generatePath(API.MATCH.URL);
     const queryParams = new URLSearchParams({ date }).toString();
     const { data } = await http.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}${path}?${queryParams}`);
-
     if (language == "vi" && data) data.forEach(item => item.timeStart = new Date(new Date(item.timeStart).getTime() + 7 * 60 * 60 * 1000).toISOString());
     if (data) data.sort((a, b) => new Date(a.timeStart) - new Date(b.timeStart));
 
@@ -57,6 +56,159 @@ export async function listMatch(tab, date) {
     };
   }
 }
+
+export async function GetH2H(id) {
+  try { 
+    const path = generatePath(API.MATCHES.H2H, { id }); 
+    const { data } = await http.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}${path}`); 
+
+    return {
+      success: true,
+      data: data,
+    };
+  } catch (error) {
+    console.log(error);
+
+    if (error.response) {
+      const { response: { data } } = error;
+      const { errorCode } = data;
+      console.error('API error:', errorCode);
+    } else {
+      console.error('RESPONSE NOT FOUND');
+    }
+    return {
+      success: false,
+    };
+  }
+}
+
+
+export async function GetODDS(id) {
+  try { 
+    const path = generatePath(API.MATCHES.ODDS, { id }); 
+    const { data } = await http.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}${path}`); 
+
+    return {
+      success: true,
+      data: data,
+    };
+  } catch (error) {
+    console.log(error);
+
+    if (error.response) {
+      const { response: { data } } = error;
+      const { errorCode } = data;
+      console.error('API error:', errorCode);
+    } else {
+      console.error('RESPONSE NOT FOUND');
+    }
+    return {
+      success: false,
+    };
+  }
+}
+
+export async function GetStatistics(id) {
+  try { 
+    const path = generatePath(API.MATCHES.Statistics, { id }); 
+    const { data } = await http.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}${path}`); 
+
+    return {
+      success: true,
+      data: data,
+    };
+  } catch (error) {
+    console.log(error);
+
+    if (error.response) {
+      const { response: { data } } = error;
+      const { errorCode } = data;
+      console.error('API error:', errorCode);
+    } else {
+      console.error('RESPONSE NOT FOUND');
+    }
+    return {
+      success: false,
+    };
+  }
+}
+
+export async function GetCoaches(id) {
+  try { 
+    const path = generatePath(API.MATCHES.Coaches, { id }); 
+    const { data } = await http.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}${path}`); 
+
+    return {
+      success: true,
+      data: data,
+    };
+  } catch (error) {
+    console.log(error);
+
+    if (error.response) {
+      const { response: { data } } = error;
+      const { errorCode } = data;
+      console.error('API error:', errorCode);
+    } else {
+      console.error('RESPONSE NOT FOUND');
+    }
+    return {
+      success: false,
+    };
+  }
+}
+
+export async function GetInjuries(id) {
+  try { 
+    const path = generatePath(API.MATCHES.Injuries, { id }); 
+    const { data } = await http.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}${path}`); 
+
+    return {
+      success: true,
+      data: data,
+    };
+  } catch (error) {
+    console.log(error);
+
+    if (error.response) {
+      const { response: { data } } = error;
+      const { errorCode } = data;
+      console.error('API error:', errorCode);
+    } else {
+      console.error('RESPONSE NOT FOUND');
+    }
+    return {
+      success: false,
+    };
+  }
+} 
+
+export async function GetAiAnalysis(id) {
+  try { 
+    const path = generatePath(API.MATCHES.AiAnalysis, { id }); 
+    const { data } = await http.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}${path}`); 
+
+    return {
+      success: true,
+      data: data,
+    };
+  } catch (error) {
+    console.log(error);
+
+    if (error.response) {
+      const { response: { data } } = error;
+      const { errorCode } = data;
+      console.error('API error:', errorCode);
+    } else {
+      console.error('RESPONSE NOT FOUND');
+    }
+    return {
+      success: false,
+    };
+  }
+} 
+
+
 
 export async function listWorld() {
   try {

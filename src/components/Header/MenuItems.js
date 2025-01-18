@@ -15,44 +15,12 @@ const MenuItems = ({ items, locale }) => {
   };
 
   return (
-    <>
-      {items.submenu ? (
-        <>
-          <Link
-            href={items.url}
-            className="nav__menu__link font-ng-light"
-            onClick={handleOnClick}
-            locale={locale}
-          >
-            {<DropdownComponent title={items.text} />}
-          </Link>
-
-          <div className={`nav__submenu${showSubmenu ? ' show' : ''}`}>
-            {items.submenu.map((submenu, index) => (
-              <Link
-                href={submenu.url}
-                key={index}
-                className="nav__submenu-item"
-                locale={locale}
-              >
-                <div className="nav__submenu-item__icon">{submenu.icon}</div>
-                <div className="nav__submenu-item__content">
-                  <div className="nav__submenu-item__content__title font-ng-medium">{submenu.text}</div>
-                  <div className="nav__submenu-item__content__desc font-ng-regular">{submenu.desc}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </>
-      ) : (
-        <Link
-          href={items.url} className="nav__menu__link font-ng-light"
-          locale={locale}
-        >
-          {items.text}
-        </Link>
-      )}
-    </>
+    <Link
+      href={items.url} className="nav__menu__link"
+      locale={locale}
+    >
+      {items.text}
+    </Link>
   );
 };
 

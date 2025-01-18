@@ -1,28 +1,3 @@
-.loading:hover path {
-  fill: red;
-}
-
-.loading {
-  margin: 20px;
-  width: 100px;
-  height: 100px;
-  -webkit-animation-name: spin;
-  -webkit-animation-duration: 2000ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-name: spin;
-  -moz-animation-duration: 2000ms;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
-  -ms-animation-name: spin;
-  -ms-animation-duration: 2000ms;
-  -ms-animation-iteration-count: infinite;
-  -ms-animation-timing-function: linear;
-  animation-name: spin;
-  animation-duration: 2000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
 
 @-ms-keyframes spin {
   from {
@@ -77,12 +52,12 @@
 }
 
 .f-match__title {
-  @apply py-2 mb-0.5 bg_mode text_mode flex items-center px-4;
+  @apply py-2 bg_mode text_mode flex items-center px-4;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .f-match__logo {
-  @apply mr-3 w-6 h-6 p-1 not_bg_mode rounded;
+  @apply mr-3 w-8 h-8 p-1 rounded;
 }
 
 .f-match {
@@ -104,7 +79,7 @@
     }
   }
 
-  &:hover {
+  &.match_upcoming:hover {
     background-color: $primary-color-hover;
     @apply cursor-pointer;
   }
@@ -274,4 +249,14 @@
     @apply py-1 px-4 rounded-xl overflow-hidden;
   }
 
+}
+
+.list--item {
+  @apply pl-4 relative;
+  &:not(:last-child) {
+    @apply mb-2;
+  }
+  &:before {
+    @apply w-1 h-1 rounded-full bg-white content-[""] absolute top-2 left-0;
+  }
 }

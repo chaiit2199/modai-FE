@@ -7,7 +7,7 @@ import MatchComponent from '../Match';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { listMatch } from '@/pages/api/getListApi';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'; 
 
 const FilterComponent = () => {
   const { t } = useTranslation();
@@ -15,54 +15,25 @@ const FilterComponent = () => {
 
   const [isCollapsed, setIsCollapsed] = useState(false);
   const collapseRef = useRef(null);
-  const [UpcomingData, setUpcomingData] = useState([]);
-  const [CompletedData, setCompletedData] = useState([]);
+  const [MatchData, setMatchData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [date, setDate] = useState(new Date());
 
-  // Fetch data by date 
-
   // Fetch match data
-  const fetchUpcoming = async () => {
-    const { success, data: dataRes } = await listMatch("upcoming", DateFormat(date));
+  const fetchMatchData = async () => {
+    const { success, data: dataRes } = await listMatch(DateFormat(date));
     if (success && dataRes) {
-      setUpcomingData(dataRes);
+      setMatchData(dataRes); 
       setLoading(false);
-    }
-  };
-
-  const fetchCompleted = async () => {
-    const { success, data: dataRes } = await listMatch("completed", DateFormat(date));
-    if (success && dataRes) {
-      setCompletedData(dataRes);
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    // fetchUpcoming();
-    // fetchCompleted();
-
-    // Condition call API
-    if (date < today) {
-      fetchCompleted();
-      console.log("1111");
-    } else if (date > today) {
-      fetchUpcoming();
-      console.log("2222");
     } else {
-      console.log("3333");
-
-      fetchUpcoming();
-      fetchCompleted();
+      setLoading(true);
     }
-
-    const intervalId =
-      date >= today ? setInterval(fetchUpcoming, 30000) : null;
-
-    return () => {
-      if (intervalId) clearInterval(intervalId);
-    };
+  }; 
+  
+  useEffect(() => { 
+    fetchMatchData();
+    const intervalId =  setInterval(fetchMatchData, 30000);
+    return () => intervalId && clearInterval(intervalId);
   }, [date]);
 
   const toggleCollapse = () => setIsCollapsed(!isCollapsed);
@@ -80,7 +51,7 @@ const FilterComponent = () => {
     };
   }, []);
 
-  const handleChangeDate = (newDate) => {
+  const handleChangeDate = (newDate) => { 
     setDate(newDate);
   }
   const handleDayChange = (offset) => {
@@ -116,31 +87,23 @@ const FilterComponent = () => {
           </button>
           <input className="hidden" type="text" value={date} readOnly />
         </div>
-      </div>
+      </div>  
       {
-        !loading && UpcomingData.map((item) => (
-          <div key={item.fixtureId} className="inner-section overflow-hidden mb-4">
-            <h6 className="f-match__title">
-              <img className="f-match__logo" src={item.leagueLogo} alt="League Logo" />
-              {item.leagueName} - {item.leagueCountry}
-            </h6>
-            <MatchComponent item={item} key={item.idHome} />
+        loading ? (
+          <div className="inner-section p-6 text-center text_mode">
+            Rất tiếc, không tìm thấy trận đấu cho ngày {formattedDate}
           </div>
-        ))
-      }
-
-      {
-        !loading && CompletedData.map((item) => (
-          <div key={item.fixtureId} className="inner-section overflow-hidden mb-4">
-            <h6 className="f-match__title">
-
-
-              <img className="f-match__logo" src={item.leagueLogo} alt="League Logo" />
-              {item.leagueName} - {item.leagueCountry}
-            </h6>
-            <MatchComponent item={item} key={item.idHome} />
-          </div>
-        ))
+        ) : (
+          MatchData.map((item) => (
+            <div key={item.fixtureId} className="inner-section overflow-hidden mb-4">
+              <h6 className="f-match__title">
+                <img className="f-match__logo" src={item.leagueLogo} alt="League Logo" />
+                {item.leagueName} - {item.leagueCountry}
+              </h6>
+              <MatchComponent date={DateFormat(date)} item={item} key={item.idHome} />
+            </div>
+          ))
+        )
       }
     </div >
   );

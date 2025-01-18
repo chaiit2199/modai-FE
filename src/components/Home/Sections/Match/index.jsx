@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { TimeFormat } from '@/utils';
 import { useRouter } from 'next/navigation';
 
-const MatchComponent = React.memo(({ item }) => {
+const MatchComponent = React.memo(({ item, date }) => {
   const [isScoreHomeUpdated, setIsScoreHomeUpdated] = useState(false);
   const [isScoreAwayUpdated, setIsScoreAwayUpdated] = useState(false);
   const [prevScoreHome, setPrevScoreHome] = useState(item.scoreHome);
@@ -46,11 +46,11 @@ const MatchComponent = React.memo(({ item }) => {
   }, [item.scoreAway]);
 
   const handleRedirect = (id) => {
-    router.push(`/matches?id=${id}`);
+    router.push(`/matches?id=${id}&date=${date}`);
   };
 
   return (
-    <div key={item.idAway} className={`f-match`} onClick={() => handleRedirect(item.fixtureId)} >
+    <div key={item.idAway} className={`f-match ${item.status !== "FT" ? "match_upcoming" : ""}`}  onClick={() => item.status !== "FT" && handleRedirect(item.fixtureId)}>
       <div className='f-match__item'>
         {item.oddHome && <p className='finalOdd'>{item.oddHome}</p>}
         <p className='flex items-center justify-end ml-auto'>
@@ -60,7 +60,9 @@ const MatchComponent = React.memo(({ item }) => {
       </div>
       <div className='f-match__score'>
         {item.status === "FT" ? (
-          <p className='f-match__score__status flex items-center'> <span className={isScoreHomeUpdated ? 'goal' : ''}>{item.scoreHome}</span> - <span className={isScoreAwayUpdated ? 'goal' : ''}>{item.scoreAway}</span></p>
+          <p className='f-match__score__status flex items-center'>
+            <span className={isScoreHomeUpdated ? 'goal' : ''}>{item.scoreHome}</span> - <span className={isScoreAwayUpdated ? 'goal' : ''}>{item.scoreAway}</span>
+          </p>
         ) : (
           <span>{TimeFormat(item.timeStart)}</span>
         )}

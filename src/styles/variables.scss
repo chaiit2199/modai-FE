@@ -3,7 +3,11 @@ $primary-color-hover: #3c3c3c;
 $secondary-color: rgba(255, 255, 255, 0.2);
 $font: 'Inter', sans-serif;
 $shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.03);
-$color-main: #F1F5F9;
+$color-main: #64748b;
+
+.text-primary {
+  color: $color-main;
+}
 
 .bg-primary {
   background-color: $primary-color;
@@ -12,6 +16,10 @@ $color-main: #F1F5F9;
   &:hover {
     background-color: $primary-color-hover;
   }
+}
+
+.bg_hover {
+  background-color: $primary-color-hover;
 }
 
 .txt-primary {
@@ -28,7 +36,7 @@ $color-main: #F1F5F9;
 }
 
 .text-primary {
-  color: #94a3b8;
+  color: #A3A3A3;
 }
 
 .shadow_primary {

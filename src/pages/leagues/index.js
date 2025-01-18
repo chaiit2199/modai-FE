@@ -43,9 +43,9 @@ const LeaguesPage = () => {
 
   if (loading) {
     return (
-      <section className='flex w-full mt-10 mb-6'>
+      <section>
         <div className='container'>
-          <div className="inner-section py-8 px-16 mb-6">Loading...</div>
+          <div className="inner-section p-6 mb-6">Loading...</div>
         </div>
       </section>
     );
@@ -53,9 +53,9 @@ const LeaguesPage = () => {
 
   if (!StandingData || !tournamentsData) {
     return (
-      <section className='flex w-full mt-10 mb-6'>
+      <section>
         <div className='container'>
-          <div className="inner-section py-8 px-16 mb-6">No data available</div>
+          <div className="inner-section p-6 mb-6">No data available</div>
         </div>
       </section>
     );
@@ -70,26 +70,26 @@ const LeaguesPage = () => {
 
   return (
     <Layout className="home-page">
-      <section className='flex w-full mt-10 mb-6'>
-        <div className='container'>
-          <div className="inner-section py-8 px-16">
+      <section>
+        <div className='page__container container-inner'>
+          <div className="inner-section p-6 text_mode">
             <div className="flex items-center">
-              <img className="w-8 h-8" src={tournamentsData.logo} alt="" />
+              <img className="leagues__logo" src={tournamentsData.logo} alt="" />
               <div className="ml-4">
                 <h1 className="text-base font-smb">{tournamentsData.name}</h1>
                 <p>{tournamentsData.nameCountry}</p>
               </div>
             </div>
           </div>
-          <div className="inner-section py-8 px-16">
+          <div className="inner-section p-6 text_mode">
             <Tabs selectedIndex={selectedIndex} onSelect={handleTabSelect}>
-              <TabList className="mb-6 core_tab__menu">
+              <TabList className="mb-6 core_tab__menu pointer-events-none">
                 <Tab>{t('table')}</Tab>
-                <Tab>{t('matches')}</Tab>
+                {/* <Tab>{t('matches')}</Tab> */}
               </TabList>
 
               <TabPanel>
-                <table className="core_table text-left">
+                <table className="core_table core_table--auto text-left">
                   <thead>
                     <tr>
                       <th>#</th>

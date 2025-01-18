@@ -1,5 +1,13 @@
+* {
+  @apply font-rg;
+}
+
 .bg_mode {
   background-color: #fff;
+}
+
+.border_mode {
+  border-color: #1a1a1a;
 }
 
 .not_bg_mode {
@@ -19,6 +27,11 @@
     background-color: #1a1a1a;
   }
 
+  .border_mode {
+    border-color: #fff;
+  }
+  
+
   .not_text_mode {
     color: #1a1a1a;
   }
@@ -34,8 +47,13 @@
 
 body.is_dark {
   @apply bg-black;
-}
+} 
 
+.overflow-x-auto {
+  &::-webkit-scrollbar {
+    @apply h-0;
+  }
+} 
 @import "./common.scss";
 @import "./custom.scss";
 @import "./components/shared/button.scss";
@@ -64,3 +82,6 @@ body.is_dark {
 @import "./form.scss";
 @import "./collapse.scss";
 @import "./components/modal.scss";
+@import "./leagues.scss";
+@import "./matches.scss";
+@import "./components/animation.scss";

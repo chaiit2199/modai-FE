@@ -1,15 +1,14 @@
 .core_tab {
   &__menu {
-    @apply flex items-center;
+    @apply flex items-center overflow-x-auto;
 
     >li {
-      @apply py-2 mr-4 border-b-2 border-solid border-transparent cursor-pointer capitalize text-base;
+      @apply py-2 mr-4  cursor-pointer capitalize px-3 rounded-lg min-w-max bg_mode text_mode;
 
       @apply outline-none;
 
-      &:hover,
-      &.react-tabs__tab--selected {
-        @apply border-black;
+      &.active {
+        @apply not_bg_mode not_text_mode;
       }
     }
   }
