@@ -28,5 +28,9 @@
       fill="#fff" opacity="1"></path>
   </g>
 
+<<<<<<< HEAD
   <text x="50" y="35" font-family="PT Sans, sans-serif" font-size="32" font-weight="bold" fill="#fff">dAI</text>
+=======
+  <text x="50" y="35" font-family="PT Sans, sans-serif" font-size="32" font-weight="bold" fill="#fff">dai</text>
+>>>>>>> bb787c1cca526b54d8bfde72cb904e233cfd7b81
 </svg>
