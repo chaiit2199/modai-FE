@@ -1,5 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useSearchParams, useRouter } from 'next/navigation';
 

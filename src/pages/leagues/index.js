@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useSearchParams } from 'next/navigation';
 import { useTranslation } from 'next-i18next';
@@ -74,7 +75,7 @@ const LeaguesPage = () => {
         <div className='page__container container-inner'>
           <div className="inner-section p-6 text_mode">
             <div className="flex items-center">
-              <img className="leagues__logo" src={tournamentsData.logo} alt="" />
+              <Image className="leagues__logo" src={tournamentsData.logo} alt="" /> 
               <div className="ml-4">
                 <h1 className="text-base font-smb">{tournamentsData.name}</h1>
                 <p>{tournamentsData.nameCountry}</p>
@@ -108,7 +109,7 @@ const LeaguesPage = () => {
                       <tr key={team.teamId}>
                         <td className="w-4">{team.rank}</td>
                         <td className="w-10 text-center">
-                          <img src={team.logo} alt={team.name} style={{ width: 'auto', height: '20px', margin: 'auto' }} />
+                          <Image src={team.logo} alt={team.name} style={{ width: 'auto', height: '20px', margin: 'auto' }} /> 
                         </td>
                         <td>{team.name}</td>
                         <td>{team.totalGames}</td>

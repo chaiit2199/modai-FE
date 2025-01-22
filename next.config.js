@@ -35,6 +35,9 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: ['media.api-sports.io'],  // Allow external image domain
+  }
 };
 
 module.exports = nextConfig;

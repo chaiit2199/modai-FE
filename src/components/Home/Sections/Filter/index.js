@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image'
 import { DateFormat } from '@/utils';
 import Calendar from 'react-calendar';
 import MatchComponent from '../Match';
@@ -97,7 +98,7 @@ const FilterComponent = () => {
           MatchData.map((item) => (
             <div key={item.fixtureId} className="inner-section overflow-hidden mb-4">
               <h6 className="f-match__title">
-                <img className="f-match__logo" src={item.leagueLogo} alt="League Logo" />
+                <Image className='f-match__logo' width={32} height={32} src={item.leagueLogo} alt="League Logo" />
                 {item.leagueName} - {item.leagueCountry}
               </h6>
               <MatchComponent date={DateFormat(date)} item={item} key={item.idHome} />

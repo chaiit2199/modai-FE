@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Image from 'next/image'
 import { DateFormat } from '@/utils';
 import Countdown from '@/components/Countdown';
 import { listMatch } from '@/pages/api/getListApi';
@@ -61,7 +61,7 @@ function HeaderBannerComponent({ size = 'default', fixtureId }) {
   if (!isMounted) return (
     <div className={`banner-component ${isSmall ? 'banner-small' : ''}`}>
       <div className="overlay">
-        <img src="/images/banner/banner_bg.jpg" alt="Banner Background" />
+        <Image src="/images/banner/banner_bg.jpg" alt="Banner Background" />
       </div>
       <div className="container-inner flex flex-col justify-center">
         <div className="banner-component__inner">
@@ -73,7 +73,7 @@ function HeaderBannerComponent({ size = 'default', fixtureId }) {
   return (
     <div className={`banner-component ${isSmall ? 'banner-small' : ''}`}>
       <div className="overlay">
-        <img src="/images/banner/banner_bg.jpg" alt="Banner Background" />
+        <Image src="/images/banner/banner_bg.jpg" alt="Banner Background" />
       </div>
       <div className="container-inner flex flex-col justify-center">
         <div className="banner-component__inner">
@@ -81,7 +81,7 @@ function HeaderBannerComponent({ size = 'default', fixtureId }) {
             <div className='banner-component--main'>
               {data ? (
                 <div className='leagueName'>
-                  <img src={data.leagueLogo} alt="" />
+                  <Image src={data.leagueLogo} alt="" />
                   {data.leagueName}
                 </div>
               ) : (
@@ -99,10 +99,14 @@ function HeaderBannerComponent({ size = 'default', fixtureId }) {
                     <tbody>
                       <tr>
                         <td>
-                          <div className='flex items-center'><img className='mr-2 w-7 h-7' src={data.logoHome} alt="" />{data.nameHome}</div>
+                          <div className='flex items-center'>
+                            <Image src={data.logoHome} alt="" />
+                            {data.nameHome}</div>
                         </td>
                         <td>
-                          <div className='flex items-center'><img className='mr-2 w-7 h-7' src={data.logoAway} alt="" />{data.nameAway}</div>
+                          <div className='flex items-center'>
+                            <Image className='mr-2 w-7 h-7' src={data.logoAway} alt="" />
+                            {data.nameAway}</div>
                         </td>
                       </tr>
                     </tbody>

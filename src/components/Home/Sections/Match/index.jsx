@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image'
 import { TimeFormat } from '@/utils';
 import { useRouter } from 'next/navigation';
 
@@ -55,7 +56,7 @@ const MatchComponent = React.memo(({ item, date }) => {
         {item.oddHome && <p className='finalOdd'>{item.oddHome}</p>}
         <p className='flex items-center justify-end ml-auto'>
           {item.nameHome}
-          <img className='ml-2 f-match__logo' src={item.logoHome} alt={item.nameHome} />
+          <Image className='ml-2 f-match__logo' width={32} height={32} src={item.logoHome} alt={item.nameHome} />
         </p>
       </div>
       <div className='f-match__score'>
@@ -69,7 +70,9 @@ const MatchComponent = React.memo(({ item, date }) => {
       </div>
       <div className='f-match__item'>
         <p className='flex items-center justify-start'>
-          <img className='mr-2 f-match__logo' src={item.logoAway} alt={item.nameAway} /> {item.nameAway}
+          <Image className='mr-2 f-match__logo' width={32} height={32} src={item.logoAway} alt={item.nameAway} />
+          {item.nameAway}
+          
         </p>
         {item.oddAway && <p className="finalOdd ml-auto">{item.oddAway}</p>}
       </div>

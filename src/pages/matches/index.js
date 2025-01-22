@@ -1,5 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useSearchParams, useRouter } from 'next/navigation';
 import StatisticsChart from '@/components/StatisticsChart';
@@ -17,12 +18,12 @@ const Performance = ({ form }) => {
     return "bg-gray-500"; // default
   };
 
-  const recentMatches = form?.split("").slice(0, 10); 
+  const recentMatches = form?.split("").slice(0, 5); 
 
   return (
-    <div className="flex space-x-2 flex-wrap">
+    <div className="flex flex-wrap justify-center">
       {recentMatches?.map((result, index) => (
-        <span key={index} className={`${getColor(result)} py-1 px-2 rounded text-xs text_mode`}>
+        <span key={index} className={`${getColor(result)} py-1 px-2 block mx-1 rounded text-xs text_mode`}>
           {result}
         </span>
       ))}
@@ -168,7 +169,8 @@ const MatchesComponent = () => {
               <tr className='bg_hover'>
                 <th> 
                   <p className='text_mode flex items-center'>
-                    <img className="f-match__logo mr-2" src={dataMatch?.leagueLogo} alt={dataMatch?.leagueName} /> {dataMatch?.leagueName}
+                    <Image className="f-match__logo mr-2" width={32} height={32} src={dataMatch?.leagueLogo} alt={dataMatch?.leagueName} /> 
+                    {dataMatch?.leagueName}
                   </p> 
                 </th>
                 </tr> 
@@ -179,13 +181,13 @@ const MatchesComponent = () => {
                     <div className='text_mode flex items-center justify-center font-rg text-xl'>
                       <div className='flex items-center w-2/5 justify-end'>
                         {dataMatch?.nameHome}
-                        <img className="f-match__logo !mx-1" src={dataMatch?.logoHome} alt={dataMatch?.nameHome} />
+                        <Image className="f-match__logo !mx-1" width={32} height={32} src={dataMatch?.logoHome} alt={dataMatch?.nameHome} /> 
                       </div> 
 
                       <p className='text-base text-[#A3A3A3] mx-2 w-1/5 justify-center'>{TimeFormat(dataMatch?.timeStart)}</p>
 
                       <div className='flex items-center w-2/5 justify-start'>
-                        <img className="f-match__logo !mx-1" src={dataMatch?.logoAway} alt={dataMatch?.nameAway} />
+                        <Image className="f-match__logo !mx-1" width={32} height={32} src={dataMatch?.logoAway} alt={dataMatch?.nameAway} /> 
                         {dataMatch?.nameAway}
                       </div> 
                     </div> 
@@ -200,8 +202,12 @@ const MatchesComponent = () => {
                 <tr className='border-b border-gray-300'>
                   <td>
                     <div className='text_mode flex items-center justify-between font-rg'>
-                      <p className='flex items-center text-[#A3A3A3]'><img className="w-4 h-4 mr-1" src="/images/icons/calendar.svg" alt="Calendar" />{VNDateFormat(dataMatch?.timeStart)}</p>
-                      <p className='flex items-center text-[#A3A3A3]'><img className="w-4 h-4 mr-1" src="/images/icons/location.svg" alt="Location" />{dataMatch?.venueName}</p>
+                      <p className='flex items-center text-[#A3A3A3]'>
+                        <Image className="mr-1" src="/images/icons/calendar.svg" alt="Calendar" width={16} height={16} /> 
+                        {VNDateFormat(dataMatch?.timeStart)}</p>
+                      <p className='flex items-center text-[#A3A3A3]'>
+                        <Image className="mr-1" src="/images/icons/location.svg" width={16} height={16} alt="Location" /> 
+                        {dataMatch?.venueName}</p>
                     </div> 
                   </td> 
                 </tr>  
@@ -216,7 +222,7 @@ const MatchesComponent = () => {
                   <div className='flex items-center justify-between'>
                     <div className='flex items-center w-1/3 justify-start'>
                       {dataMatch?.nameHome}
-                      <img className="f-match__logo !mx-1" src={dataMatch?.logoHome} alt={dataMatch?.nameHome} />
+                      <Image className="f-match__logo !mx-1" width={32} height={32} src={dataMatch?.logoHome} alt={dataMatch?.nameHome} /> 
                       <p className='ml-2 text-[#A3A3A3]'>{dataAiAnalysis.ai?.squads.home.formation}</p>
                     </div> 
                     <p className='text_mode flex items-center justify-center w-1/3'>
@@ -224,7 +230,7 @@ const MatchesComponent = () => {
                     </p> 
                     <div className='flex items-center justify-end w-1/3'>
                       <p className='mr-2 text-[#A3A3A3]'>{dataAiAnalysis.ai?.squads.away.formation}</p>
-                      <img className="f-match__logo !mx-1 items-center" src={dataMatch?.logoAway} alt={dataMatch?.nameAway} />
+                      <Image className="f-match__logo !mx-1 items-center" width={32} height={32} src={dataMatch?.logoAway} alt={dataMatch?.nameAway} /> 
                       {dataMatch?.nameAway}
                     </div> 
                   </div> 
@@ -249,7 +255,7 @@ const MatchesComponent = () => {
                   {console.log(dataCoachesHome)}
                   <td className="border-right"> 
                     <div className='flex items-center justify-center font-md text_mode'>
-                      <img className="player_logo mr-2" src={dataCoachesHome?.photo} alt={dataCoachesHome?.name} />
+                      <Image className="player_logo mr-2" width={32} height={32} src={dataCoachesHome?.photo} alt={dataCoachesHome?.name} /> 
                       <p className='flex flex-col items-start'>
                         <span>{dataCoachesHome?.name}</span>
                         <span className='text-[#A3A3A3] text-xs'>{dataCoachesHome?.nationality}</span>
@@ -262,8 +268,7 @@ const MatchesComponent = () => {
                         <span>{dataCoachesAway?.name}</span>
                         <span className='text-[#A3A3A3] text-xs'>{dataCoachesAway?.nationality}</span>
                       </p>
-                      
-                      <img className="player_logo ml-2" src={dataCoachesAway?.photo} alt={dataCoachesAway?.name} />
+                      <Image className="player_logo ml-2" width={32} height={32} src={dataCoachesAway?.photo} alt={dataCoachesAway?.name} /> 
                     </div>
                   </td> 
                 </tr>  
@@ -286,13 +291,13 @@ const MatchesComponent = () => {
                 <th className='!align-middle text-left'>Thống Kê</th>
                 <th>
                   <div className='flex items-center justify-center text_mode'>
-                    <img className="f-match__logo mr-2" src={dataMatch?.logoHome} alt={dataMatch?.nameHome} />
+                    <Image className="f-match__logo mr-2" width={32} height={32} src={dataMatch?.logoHome} alt={dataMatch?.nameHome} /> 
                     {dataMatch?.nameHome}
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center justify-center text_mode'>
-                    <img className="f-match__logo mr-2" src={dataMatch?.logoAway} alt={dataMatch?.nameAway} />
+                    <Image className="f-match__logo mr-2" width={32} height={32} src={dataMatch?.logoAway} alt={dataMatch?.nameAway} /> 
                     {dataMatch?.nameAway}
                   </div>  
                 </th> 
@@ -475,13 +480,13 @@ const MatchesComponent = () => {
                 <th className='text-left w-1/5 !align-middle'>Nhận định</th>
                 <th className='w-2/5'>
                   <div className='flex items-center text_mode'>
-                    <img className="f-match__logo mr-2" src={dataMatch?.logoHome} alt={dataMatch?.nameHome} />
+                    <Image className="f-match__logo mr-2" width={32} height={32} src={dataMatch?.logoHome} alt={dataMatch?.nameHome} /> 
                     {dataMatch?.nameHome}
                   </div>
                 </th>
                 <th className='w-2/5'>
                   <div className='flex items-center text_mode '>
-                    <img className="f-match__logo mr-2" src={dataMatch?.logoAway} alt={dataMatch?.nameAway} />
+                    <Image className="f-match__logo mr-2" width={32} height={32} src={dataMatch?.logoAway} alt={dataMatch?.nameAway} /> 
                     {dataMatch?.nameAway}
                   </div>  
                 </th> 
@@ -559,7 +564,7 @@ const MatchesComponent = () => {
              {dataH2H.map((item) => (
                  <div className="matches_details" key={item.fixtureId}>
                    <p className="mathches__item">
-                     <img className="mathches__logo mr-2" src={item.logoHome} alt={item.nameHome} />
+                     <Image className="mathches__logo mr-2" width={32} height={32} src={item.logoHome} alt={item.nameHome} /> 
                      {item.nameHome}
                    </p>
  
@@ -574,7 +579,7 @@ const MatchesComponent = () => {
                    
                    <p className="mathches__item">
                      {item.nameAway}
-                     <img className="mathches__logo ml-2" src={item.logoAway} alt={item.nameAway} />
+                     <Image className="mathches__logo ml-2" width={32} height={32} src={item.logoAway} alt={item.nameAway} /> 
                    </p>
                  </div>
                ))}

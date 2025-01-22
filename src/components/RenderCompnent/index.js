@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export function Injuries(data) {
     data.length > 0 && (
         <td className={data === dataInjuriesHome ? "border-right" : ""}>
@@ -5,7 +7,7 @@ export function Injuries(data) {
             <div className='grid grid-cols-2 gap-6'>
               {data.map((item) => (
                 <div className='player__injuries' key={item.playerId}>
-                  <img className="player_logo mr-2" src={item.photo} alt={item.name} />
+                  <Image className="player_logo mr-2" src={item.photo} alt={item.name} /> {item.name}
                   <p className='text-left'>{item.name} <br /> <span className='reasonInjure'>{item.reasonInjure}</span> </p>
                 </div>
               ))}
