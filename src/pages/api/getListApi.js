@@ -246,7 +246,7 @@ export async function listWorld() {
 export async function getStanding(id, season) {
   try {
     const url = API.LEAGUES.getSTANDING(id, season);
-    const { data } = await http.get(url);
+    const { data } = await http.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}${url}`); 
     return {
       success: true,
       data: data,

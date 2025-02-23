@@ -75,7 +75,7 @@ const LeaguesPage = () => {
         <div className='page__container container-inner'>
           <div className="inner-section p-6 text_mode">
             <div className="flex items-center">
-              <Image className="leagues__logo" src={tournamentsData.logo} alt="" /> 
+              <Image className="leagues__logo" width={32} height={32} src={tournamentsData.logo} alt="" /> 
               <div className="ml-4">
                 <h1 className="text-base font-smb">{tournamentsData.name}</h1>
                 <p>{tournamentsData.nameCountry}</p>
@@ -86,7 +86,6 @@ const LeaguesPage = () => {
             <Tabs selectedIndex={selectedIndex} onSelect={handleTabSelect}>
               <TabList className="mb-6 core_tab__menu pointer-events-none">
                 <Tab>{t('table')}</Tab>
-                {/* <Tab>{t('matches')}</Tab> */}
               </TabList>
 
               <TabPanel>
@@ -108,8 +107,8 @@ const LeaguesPage = () => {
                     {StandingData.map((team) => (
                       <tr key={team.teamId}>
                         <td className="w-4">{team.rank}</td>
-                        <td className="w-10 text-center">
-                          <Image src={team.logo} alt={team.name} style={{ width: 'auto', height: '20px', margin: 'auto' }} /> 
+                        <td className="text-center">
+                          <Image src={team.logo} alt={team.name} width={20} height={20} style={{ margin: 'auto' }} /> 
                         </td>
                         <td>{team.name}</td>
                         <td>{team.totalGames}</td>

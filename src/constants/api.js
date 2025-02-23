@@ -14,6 +14,6 @@ export const API = {
     AiAnalysis: '/ai/:id'
   },
   LEAGUES: {
-    getSTANDING: (id, season) => `http://localhost:8081/api/v1/standings/${id}?season=${season}`
+    getSTANDING: (id, season) => `/standings/${id}?season=${season}`
   }
 };
