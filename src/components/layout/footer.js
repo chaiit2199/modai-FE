@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__up">
         <div className="container-inner flex justify-center">
-          © Copyright 2025 FotMob
+          © Copyright 2025 MODAI
         </div>
       </div>
     </footer>
